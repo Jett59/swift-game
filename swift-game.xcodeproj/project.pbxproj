@@ -197,6 +197,17 @@
 			isa = PBXProject;
 			attributes = {
 				ORGANIZATIONNAME = "___FULLUSERNAME___";
+				TargetAttributes = {
+					E00DD0CCB0C89E02D2973A13 = {
+						DevelopmentTeam = H6D8642DKH;
+					};
+					E00DDB126F931AA62FD5C2A8 = {
+						DevelopmentTeam = H6D8642DKH;
+					};
+					E00DDF5620D51708DD459356 = {
+						DevelopmentTeam = H6D8642DKH;
+					};
+				};
 			};
 			buildConfigurationList = E00DDE6EB7E5C8C1AA3CE56F /* Build configuration list for PBXProject "swift-game" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -424,6 +435,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = H6D8642DKH;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -477,6 +489,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = H6D8642DKH;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
