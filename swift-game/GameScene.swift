@@ -13,7 +13,7 @@ class GameScene: SKScene {
     
     private var label : SKLabelNode?
     private var spinnyNode : SKShapeNode?
-    
+    private var testNode : SKShapeNode?
     override func didMove(to view: SKView) {
         
         // Get label node from scene and store it for use later
@@ -25,14 +25,18 @@ class GameScene: SKScene {
         
         // Create shape node to use during mouse interaction
         let w = (self.size.width + self.size.height) * 0.05
-        self.spinnyNode = SKShapeNode.init(rectOf: CGSize.init(width: w, height: w), cornerRadius: w * 0.3)
-        
+        self.spinnyNode = SKShapeNode.init(rectOf: CGSize.init(width: w, height: w), cornerRadius: w * 0.0)
+        self.testNode = SKShapeNode.init(circleOfRadius: 1.0 * w)
+        if let testNode = self.testNode {
+            testNode.run(SKAction.repeatForever(SKAction.move(by: CGVector.init(dx: 100.0, dy: 0.0), duration: 1)))
+            
+        }
         if let spinnyNode = self.spinnyNode {
-            spinnyNode.lineWidth = 2.5
+            spinnyNode.lineWidth = 10.5
             
             spinnyNode.run(SKAction.repeatForever(SKAction.rotate(byAngle: CGFloat(Double.pi), duration: 1)))
             spinnyNode.run(SKAction.sequence([SKAction.wait(forDuration: 0.5),
-                                              SKAction.fadeOut(withDuration: 0.5),
+                                              SKAction.fadeOut(withDuration: 1.5),
                                               SKAction.removeFromParent()]))
         }
     }
@@ -43,6 +47,12 @@ class GameScene: SKScene {
             n.position = pos
             n.strokeColor = SKColor.green
             self.addChild(n)
+        }
+        if let c = self.testNode?.copy() as! SKShapeNode? {
+            c.position = pos
+            c.strokeColor = SKColor.blue
+            c.fillColor = SKColor.red
+            self.addChild(c)
         }
     }
     
